@@ -1,0 +1,33 @@
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tr>
+                <td width="200" valign="top">
+                        <%=render :partial=>'/shared/menu' %>
+                </td>
+                <td width="565" valign="top">
+                        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
+                                <tr>
+                                        <td class="content_title"> News </td>
+                                </tr>
+                                <tr>
+                                        <td>
+
+                                                <table>
+                                                        <tr>
+                                                                <th width='90%'>Title</th>
+                                                                <th>Date</th>
+                                                        </tr>
+
+                                                        <% for news_topic in @news_topics %>
+                                                            <tr>
+                                                                    <td>- <%= link_to h(news_topic.title), news_topic %></td>
+                                                                    <td><small style="color:red"><%= news_topic.created_at.strftime("%Y-%m-%d") %></small></td>
+                                                            </tr>
+                                                        <% end %>
+                                                </table>
+
+                                        </td>
+                                </tr>
+                        </table>
+                </td>
+        </tr>
+</table>

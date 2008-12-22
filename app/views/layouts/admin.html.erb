@@ -1,0 +1,23 @@
+<html>
+        <head>
+                <title>admin</title>
+                <%=javascript_include_tag 'prototype','effects','controls','application' %>
+        </head>
+        <body>
+                <div style="float:left;width:200px;">
+                        <b>Menu</b>
+
+                        <p><%=link_to 'Products Manage',admin_products_path %></p>
+                        <p><%=link_to 'Category Manage',admin_categories_path %></p>
+                        <p><%=link_to 'Feedback Manage',admin_feedbacks_path %></p>
+                        <p><%=link_to 'News Manage',admin_news_topics_path %></p>
+                        <p><%=link_to 'Login Config',:controller=>:home,:action=>:config %></p>
+                        <p><%=link_to 'AboutUS Config',:controller=>:home,:action=>:set_about_us %></p>
+                        <p><%=link_to 'ContactUS Config',:controller=>:home,:action=>:set_contact_us %></p>
+                        <p><%=link_to 'Logout',:controller=>:home,:action=>:logout %></p>
+                </div>
+                <div style="float:left;">
+                        <%=yield%>
+                </div>
+        </body>
+</html>
