@@ -1,0 +1,66 @@
+<%=javascript_include_tag 'swfupload','upload' %>
+<h4>Upload pictures.</h4>
+
+<div>
+        <ol id='selected_files'>
+        </ol>
+        <div id="btn_group">
+                <div id="browse"></div>
+                <input type="button" id="upload" class="upload" value='upload'></input>
+        </div>
+</div>
+<p>
+        <div id="progress" style="color:red;"></div>
+</p>
+
+<script type="text/javascript">
+        var swfu;
+
+        function init_swfupload() {
+                var upload=new Upload();
+                swfu = new SWFUpload({
+                        upload_url: "<%=admin_product_pictures_path(params[:id]) %>",
+                        flash_url: "/flash/swfupload.swf",
+
+                        file_size_limit: "2 MB",
+                        file_types: "*.png;*.gif;*.jpg;*.jpeg;*.bmp;",
+                        file_types_description: "Image Files",
+
+                        file_queued_handler: upload.file_queued,
+                        file_dialog_complete_handler: upload.file_dialog_complete,
+
+                        upload_start_handler: upload.upload_start,
+                        upload_progress_handler: upload.upload_progress,
+                        upload_error_handler: upload.upload_error,
+                        upload_success_handler: upload.upload_success,
+                        upload_complete_handler: upload.upload_complete,
+
+                        // Button Settings
+                        button_image_url : "/images/SmallSpyGlassWithTransperancy_17x18.png",	// Relative to the SWF file
+                        button_placeholder_id : "browse",
+                        button_width: 180,
+                        button_height: 18,
+                        button_text : '<span class="button">Select Images <span class="buttonSmall">(2 MB Max)</span></span>',
+                        button_text_style : '.button { font-family: Helvetica, Arial, sans-serif; font-size: 12pt; } .buttonSmall { font-size: 10pt; }',
+                        button_text_top_padding: 0,
+                        button_text_left_padding: 18,
+                        button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+                        button_cursor: SWFUpload.CURSOR.HAND,
+
+                        debug: false // Set to true to find out why things aren't working
+                });
+
+                $('upload').observe('click', function(event){
+                        if(upload.files_queued==0)
+                        {
+                                alert('Please select at least a file!');
+                        }
+                        else
+                        {
+                                swfu.startUpload();
+                        }
+                });
+        }
+
+        init_swfupload();
+</script>

@@ -1,0 +1,17 @@
+<h1>Please Login</h1>
+
+<% form_for(:login,:url=>{:controller=>'/admin/home', :action=>'login'}) do |f| %>
+    <%= flash[:notice] %>
+
+    <p>
+            <%= f.label :username %><br />
+            <%= f.text_field :username %>
+    </p>
+    <p>
+            <%= f.label :password %><br />
+            <%= f.password_field :password %>
+    </p>
+    <p>
+            <%= f.submit "Login" %>
+    </p>
+<% end %>

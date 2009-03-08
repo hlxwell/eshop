@@ -1,0 +1,17 @@
+<h1>Config Login username and password</h1>
+
+<% form_for(:login,:url=>{:controller=>'/admin/home', :action=>'set_login_info'}) do |f| %>
+    <%= flash[:notice] %>
+
+    <p>
+            <%= f.label :username %><br />
+            <%= f.text_field :username %>
+    </p>
+    <p>
+            <%= f.label :password %><br />
+            <%= f.password_field :password %>
+    </p>
+    <p>
+            <%= f.submit "Create" %>
+    </p>
+<% end %>

@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @news_topic.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @news_topic.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_news_topic_path(@news_topic) %> |
+<%= link_to 'Back', admin_news_topics_path %>
