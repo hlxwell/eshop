@@ -1,6 +1,6 @@
 class Admin::NewsTopicsController < ApplicationController
     layout 'admin'
-
+    
     def index
         @news_topics = NewsTopic.find(:all)
 
@@ -19,7 +19,7 @@ class Admin::NewsTopicsController < ApplicationController
 
     def new
         @news_topic = NewsTopic.new
-
+        @news_categories = NewsCategory.find(:all)
         respond_to do |format|
             format.html
         end
@@ -27,6 +27,7 @@ class Admin::NewsTopicsController < ApplicationController
 
     def edit
         @news_topic = NewsTopic.find(params[:id])
+        @news_categories = NewsCategory.find(:all)
     end
 
     def create

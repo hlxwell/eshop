@@ -1,9 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :orders
+
+  map.resources :news_categories
+
     map.resources :news_topics
     map.resources :feedbacks
     map.resources :products, :collection=>{:search=>:post} do |product|
         product.resources :pictures
         product.resources :feedbacks
+        product.resources :orders
     end
 
     #admin name space
@@ -15,6 +20,8 @@ ActionController::Routing::Routes.draw do |map|
         admin.resources :products,:member=>{:upload_picture=>:get} do |product|
             product.resources :pictures
         end
+        admin.resources :news_categories
+        admin.resources :orders
     end
 
     # The priority is based upon order of creation: first created -> highest priority.

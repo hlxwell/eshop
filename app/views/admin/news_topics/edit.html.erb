@@ -3,19 +3,47 @@
 <h1>Editing news_topic</h1>
 
 <% form_for(@news_topic,:url=>admin_news_topic_path(@news_topic)) do |f| %>
-    <%= f.error_messages %>
+  <%= f.error_messages %>
 
-    <p>
-            <%= f.label :title %><br />
-            <%= f.text_field :title %>
-    </p>
-    <p>
-            <%= f.label :body %><br />
-            <%= fckeditor_textarea("news_topic", "body", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
-    </p>
-    <p>
-            <%= f.submit "Update" %>
-    </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= fckeditor_textarea("news_topic", "body", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
+  </p>
+  <p>
+    <%= f.label :news_category_id %><br />
+    <%= f.hidden_field :news_category_id %>
+  </p>
+  <p>
+    <script src="/javascripts/xtree.js"></script>
+    <link type="text/css" rel="stylesheet" href="xtree.css">
+
+    <script  type="text/javascript">
+      function setCategory(id){
+        var d=document.getElementById("news_topic_news_category_id");
+        if(id==0)
+          d.value="";
+        else
+          d.value=id.toString();
+      }
+      var tree=new WebFXTree("Root");
+  <% for nc in @news_categories   %>
+      var tree_<%=nc.id %>=new WebFXTreeItem('<%=nc.name %>',"javascript:setCategory(<%=nc.id%>)");
+    <%if nc.parent_id.blank? %>
+        tree.add(tree_<%=nc.id %>);
+    <%else%>
+        tree_<%=nc.parent_id %>.add(tree_<%=nc.id %>,"javascript:setCategory(<%=nc.id%>)");
+    <%end%>
+  <%  end %>
+    document.write(tree);
+    </script>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
 <% end %>
 
 <%= link_to 'Show', admin_news_topic_path(@news_topic) %> |

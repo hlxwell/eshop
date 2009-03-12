@@ -20,4 +20,14 @@ module ApplicationHelper
             render :partial=>'/feedbacks/new'
         end
     end
+
+    def render_new_order_form(type=nil)
+        @order = Order.new
+        if type == 'product'
+            render :partial=>'/orders/new_for_product'
+        else
+            render :partial=>'/orders/new'
+        end
+    end
+
 end
