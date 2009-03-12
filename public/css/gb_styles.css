@@ -1,0 +1,78 @@
+﻿#GB_overlay {
+	Z-INDEX: 100; LEFT: 0px; MARGIN: auto; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #000
+}
+#GB_window {
+	FONT-SIZE: 1px; Z-INDEX: 150; LEFT: 0px; OVERFLOW: visible; POSITION: absolute; TOP: 0px
+}
+#GB_window .content {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: auto; PADDING-TOP: 0px
+}
+#GB_frame {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: auto; PADDING-TOP: 0px; WHITE-SPACE: nowrap; BORDER-RIGHT-WIDTH: 0px
+}
+.GB_Gallery {
+	MARGIN: 0px 22px
+}
+.GB_Gallery .content {
+	BORDER-RIGHT: #ddd 3px solid; BORDER-TOP: #ddd 3px solid; BORDER-LEFT: #ddd 3px solid; BORDER-BOTTOM: #ddd 3px solid; BACKGROUND-COLOR: #fff
+}
+.GB_header {
+	BORDER-TOP: #555 2px solid; Z-INDEX: 500; LEFT: 0px; MARGIN: 0px; BORDER-BOTTOM: #555 2px solid; POSITION: absolute; TOP: 10px
+}
+.GB_header .inner {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; FONT-FAMILY: Arial, Verdana, sans-serif; BACKGROUND-COLOR: #333
+}
+.GB_header TABLE {
+	MARGIN: 0px; WIDTH: 100%; BORDER-COLLAPSE: collapse
+}
+.GB_header .caption {
+	FONT-SIZE: 20px; COLOR: #eee; WHITE-SPACE: nowrap; TEXT-ALIGN: left
+}
+.GB_header .close {
+	TEXT-ALIGN: right
+}
+.GB_header .close IMG {
+	Z-INDEX: 500; CURSOR: pointer
+}
+.GB_header .middle {
+	WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+#GB_middle {
+	COLOR: #eee
+}
+#GB_middle IMG {
+	VERTICAL-ALIGN: middle; CURSOR: pointer
+}
+#GB_middle .disabled {
+	CURSOR: default
+}
+#GB_middle .left {
+	PADDING-RIGHT: 10px
+}
+#GB_middle .right {
+	PADDING-LEFT: 10px
+}
+.GB_Window .content {
+	BORDER-RIGHT: #ccc 3px solid; BORDER-TOP: #ccc 3px; BORDER-LEFT: #ccc 3px solid; BORDER-BOTTOM: #ccc 3px solid; BACKGROUND-COLOR: #fff
+}
+.GB_Window .header {
+	BORDER-RIGHT: #ccc 3px solid; PADDING-RIGHT: 0px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; MARGIN: 0px; BORDER-LEFT: #ccc 3px solid; COLOR: #333; PADDING-TOP: 3px; BORDER-BOTTOM: #aaa 1px solid; HEIGHT: 22px
+}
+.GB_Window .caption {
+	PADDING-RIGHT: 20px; FONT-WEIGHT: bold; FONT-SIZE: 12px; WHITE-SPACE: nowrap; TEXT-ALIGN: left
+}
+.GB_Window .close {
+	TEXT-ALIGN: right
+}
+.GB_Window .close SPAN {
+	FONT-SIZE: 12px; CURSOR: pointer
+}
+.GB_Window .close IMG {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; CURSOR: pointer; PADDING-TOP: 0px
+}
+.GB_Window .on {
+	BORDER-BOTTOM: #333 1px solid
+}
+.GB_Window .click {
+	BORDER-BOTTOM: red 1px solid
+}

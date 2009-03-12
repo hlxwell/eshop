@@ -1,0 +1,43 @@
+<h1>Listing news_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Parent</th>
+  </tr>
+
+  <% for news_category in @news_categories %>
+    <tr>
+      <td><%=h news_category.name %></td>
+      <td><%=h news_category.parent_id %></td>
+      <td><%= link_to 'Show', admin_news_category_path(news_category) %></td>
+      <td><%= link_to 'Edit', edit_admin_news_category_path(news_category) %></td>
+      <td><%= link_to 'Destroy', admin_news_category_path(news_category), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+    <script src="/javascripts/xtree.js"></script>
+    <link type="text/css" rel="stylesheet" href="xtree.css">
+
+    <script  type="text/javascript">
+      function setCategory(id){
+        var d=document.getElementById("news_topic_news_category_id");
+        if(id==0)
+          d.value="";
+        else
+          d.value=id.toString();
+      }
+      var tree=new WebFXTree("Root");
+  <% for nc in @news_categories   %>
+      var tree_<%=nc.id %>=new WebFXTreeItem('<%=nc.name %>',"javascript:setCategory(<%=nc.id%>)");
+    <%if nc.parent_id.blank? %>
+        tree.add(tree_<%=nc.id %>);
+    <%else%>
+        tree_<%=nc.parent_id %>.add(tree_<%=nc.id %>,"javascript:setCategory(<%=nc.id%>)");
+    <%end%>
+  <%  end %>
+    document.write(tree);
+    </script>
+<br />
+
+<%= link_to 'New news_category', new_admin_news_category_path %>

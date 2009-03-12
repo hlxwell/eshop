@@ -1,0 +1,44 @@
+<h1>Editing news_category</h1>
+
+<% form_for(@news_category,:url => admin_news_categorie_path(@news_category)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :parent_id %><br />
+    <%= f.text_field :parent_id %>
+  </p>
+  <p>
+    <script src="/javascripts/xtree.js"></script>
+    <link type="text/css" rel="stylesheet" href="xtree.css">
+
+    <script  type="text/javascript">
+      function setCategory(id){
+        var d=document.getElementById("news_category_parent_id");
+        if(id==0)
+          d.value="";
+        else
+          d.value=id.toString();
+      }
+      var tree=new WebFXTree("Root","javascript:setCategory(0)");
+  <% for nc in @news_categories   %>
+      var tree_<%=nc.id %>=new WebFXTreeItem('<%=nc.name %>',"javascript:setCategory(<%=nc.id%>)");
+    <%if nc.parent_id.blank? %>
+        tree.add(tree_<%=nc.id %>);
+    <%else%>
+        tree_<%=nc.parent_id %>.add(tree_<%=nc.id %>,"javascript:setCategory(<%=nc.id%>)");
+    <%end%>
+  <%  end %>
+    document.write(tree);
+    </script>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', admin_news_category_path(@news_category) %> |
+<%= link_to 'Back', admin_news_categories_path %>

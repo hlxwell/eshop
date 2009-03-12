@@ -1,0 +1,43 @@
+<p>
+  <b>Realname:</b>
+  <%=h @order.realname %>
+</p>
+
+<p>
+  <b>Idcard:</b>
+  <%=h @order.idcard %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%=h @order.product_id %>
+</p>
+
+<p>
+  <b>Peoplenum:</b>
+  <%=h @order.peoplenum %>
+</p>
+
+<p>
+  <b>Days:</b>
+  <%=h @order.days %>
+</p>
+
+<p>
+  <b>Arrivaldate:</b>
+  <%=h @order.arrivaldate %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%=h @order.contact %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @order.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_order_path(@order) %> |
+<%= link_to 'Back', admin_orders_path %>

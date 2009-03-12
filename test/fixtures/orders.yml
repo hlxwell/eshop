@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  realname: MyString
+  idcard: MyString
+  product_id: 1
+  peoplenum: 1
+  days: 1
+  arrivaldate: 2009-03-11 21:21:53
+  contact: MyString
+  email: MyString
+
+two:
+  realname: MyString
+  idcard: MyString
+  product_id: 1
+  peoplenum: 1
+  days: 1
+  arrivaldate: 2009-03-11 21:21:53
+  contact: MyString
+  email: MyString

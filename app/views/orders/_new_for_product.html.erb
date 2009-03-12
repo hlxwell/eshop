@@ -1,0 +1,54 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
+        <tr>
+                <td class="content_title">订房</td>
+        </tr>
+        <tr>
+                <td height="118" valign="top">
+                        <% form_for(:order,:url=>product_orders_path(@product)) do |f| %>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                    <tr><td colspan="2" align="center" style="color:red;"><%= f.error_messages %><%=flash[:notice]%></td></tr>
+                                    <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">姓名</span></td>
+                                            <td width="84%"><%= f.text_field :realname,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                     <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">身份证</span></td>
+                                            <td width="84%"><%= f.text_field :idcard,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                                                        <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">人数</span></td>
+                                            <td width="84%"><%= f.text_field :peoplenum,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                    <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">预住天数</span></td>
+                                            <td width="84%"><%= f.text_field :days,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                    <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">到达日期</span></td>
+                                            <td width="84%"><%= f.datetime_select :arrivaldate,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                    <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">Email</span></td>
+                                            <td width="84%"><%= f.text_field :email,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                    <tr>
+                                            <td width="16%" align="right">
+                                            <span class="property_title">联系方式</span></td>
+                                            <td width="84%"><%= f.text_field :contact,:style=>"width: 400px;" %></td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right" valign="top">
+                                            &nbsp;</td>
+                                            <td><%= f.submit "Create" %></td>
+                                    </tr>
+                            </table>
+                        <% end %>
+                </td>
+        </tr>
+</table>
