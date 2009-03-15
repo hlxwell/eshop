@@ -1,20 +1,20 @@
-<h1>Listing categories</h1>
+<h1>客房分类列表</h1>
 
-<table>
+<table border='1'>
   <tr>
-    <th>Name</th>
+    <th>名称</th>
   </tr>
 
 <% for category in @categories %>
   <tr>
     <td><%=h category.name %></td>
-    <td><%= link_to 'Show', admin_category_path(category) %></td>
-    <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
-    <td><%= link_to 'Destroy', admin_category_path(category), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to '显示', admin_category_path(category) %></td>
+    <td><%= link_to '修改', edit_admin_category_path(category) %></td>
+    <td><%= link_to '删除', admin_category_path(category), :confirm => '确定要删除吗?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New category', new_admin_category_path %>
+<%= link_to '创建客房分类', new_admin_category_path %>

@@ -1,34 +1,34 @@
-<h1>New order</h1>
+<h1>新订单</h1>
 
 <% form_for(@order,:url => admin_order_path(@order)) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :realname %><br />
+    <%= f.label "真实姓名" %><br />
     <%= f.text_field :realname %>
   </p>
   <p>
-    <%= f.label :idcard %><br />
+    <%= f.label "身份证" %><br />
     <%= f.text_field :idcard %>
   </p>
   <p>
-    <%= f.label :product_id %><br />
-    <%= f.text_field :product_id %>
+    <%= f.label "房间类型" %><br />
+    <%= f.select :product_id,Product.find(:all).collect {|c| [ c.name, c.id ] } %>
   </p>
   <p>
-    <%= f.label :peoplenum %><br />
+    <%= f.label "人数" %><br />
     <%= f.text_field :peoplenum %>
   </p>
   <p>
-    <%= f.label :days %><br />
+    <%= f.label "预住天数" %><br />
     <%= f.text_field :days %>
   </p>
   <p>
-    <%= f.label :arrivaldate %><br />
+    <%= f.label "到达日期" %><br />
     <%= f.datetime_select :arrivaldate %>
   </p>
   <p>
-    <%= f.label :contact %><br />
+    <%= f.label "联系方式" %><br />
     <%= f.text_field :contact %>
   </p>
   <p>
@@ -36,8 +36,8 @@
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "创建" %>
   </p>
 <% end %>
 
-<%= link_to 'Back', admin_orders_path %>
+<%= link_to '后退', admin_orders_path %>

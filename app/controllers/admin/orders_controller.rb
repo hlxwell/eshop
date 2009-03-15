@@ -1,7 +1,7 @@
 class Admin::OrdersController < ApplicationController
   layout 'admin'
   def index
-    @orders = Order.find(:all)
+    @orders = Order.find(:all,:include => :product)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,7 +12,7 @@ class Admin::OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.xml
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id],:include => :product)
 
     respond_to do |format|
       format.html # show.html.erb

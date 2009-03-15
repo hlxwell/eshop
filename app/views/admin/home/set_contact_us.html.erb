@@ -1,15 +1,15 @@
 <%= javascript_include_tag :fckeditor %>
 
-<h1>Config Contact US</h1>
+<h1>设置联系我们信息</h1>
 
 <% form_for(:setting,:url=>{:controller=>'/admin/home', :action=>'set_contact_us'}) do |f| %>
     <%= flash[:notice] %>
 
     <p>
-            <%= f.label :content %><br />
+            <%= f.label "内容" %><br />
             <%= fckeditor_textarea("setting", "value", :toolbarSet => 'Simple', :width => '650px', :height => '500px') %>
     </p>
     <p>
-            <%= f.submit "Update" %>
+            <%= f.submit "更新" %>
     </p>
 <% end %>

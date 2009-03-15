@@ -1,39 +1,43 @@
 <%= javascript_include_tag :fckeditor %>
 
-<h1>Editing product</h1>
+<h1>修改房间类型</h1>
 
 <% form_for(@product, :url=>admin_product_path(@product),:method=>:put) do |f| %>
     <%= f.error_messages %>
 
     <p>
-            <%= f.label :category %><br />
+            <%= f.label "房间分类" %><br />
             <%= f.select :category_id,Category.find(:all).collect {|c| [ c.name, c.id ] } %>
     </p>
     <p>
-            <%= f.label :name %><br />
+            <%= f.label "名称" %><br />
             <%= f.text_field :name %>
     </p>
     <p>
-            <%= f.label :specification %><br />
+            <%= f.label "价格" %><br />
+            <%= f.text_field :number %>
+    </p>
+    <p>
+            <%= f.label "规格" %><br />
             <%= f.text_field :specification %>
     </p>
     <p>
-            <%= f.label :description %><br />
+            <%= f.label "描述" %><br />
             <%= fckeditor_textarea("product", "description", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
     </p>
 
     <% for pic in @product.pictures %>
         <p id="picture_<%=pic.id%>">
                 <%=link_to image_tag(pic.public_filename(:small)),pic.public_filename()  %>
-                <%=link_to_remote 'delete',:url=>admin_product_picture_path(@product,pic),:method=>:delete%>
+                <%=link_to_remote '删除',:url=>admin_product_picture_path(@product,pic),:method=>:delete%>
         </p>
     <% end %>
 
     <%=link_to '上传照片',upload_picture_admin_product_path(@product) %>
     <p>
-            <%= f.submit "Update" %>
+            <%= f.submit "更新" %>
     </p>
 <% end %>
 
-<%= link_to 'Show', admin_product_path(@product) %> |
-<%= link_to 'Back', admin_products_path %>
+<%= link_to '显示', admin_product_path(@product) %> |
+<%= link_to '后退', admin_products_path %>

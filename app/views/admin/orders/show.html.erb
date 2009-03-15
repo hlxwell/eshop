@@ -1,35 +1,35 @@
 <p>
-  <b>Realname:</b>
+  <b>真实姓名:</b>
   <%=h @order.realname %>
 </p>
 
 <p>
-  <b>Idcard:</b>
+  <b>身份证:</b>
   <%=h @order.idcard %>
 </p>
 
 <p>
-  <b>Product:</b>
-  <%=h @order.product_id %>
+  <b>房间类型ID:</b>
+  <%=h @order.product.name %>
 </p>
 
 <p>
-  <b>Peoplenum:</b>
+  <b>人数:</b>
   <%=h @order.peoplenum %>
 </p>
 
 <p>
-  <b>Days:</b>
+  <b>预住天数:</b>
   <%=h @order.days %>
 </p>
 
 <p>
-  <b>Arrivaldate:</b>
+  <b>到达日期:</b>
   <%=h @order.arrivaldate %>
 </p>
 
 <p>
-  <b>Contact:</b>
+  <b>联系方式:</b>
   <%=h @order.contact %>
 </p>
 
@@ -39,5 +39,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_admin_order_path(@order) %> |
-<%= link_to 'Back', admin_orders_path %>
+<%= link_to '修改', edit_admin_order_path(@order) %> |
+<%= link_to '后退', admin_orders_path %>

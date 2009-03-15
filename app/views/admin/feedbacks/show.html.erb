@@ -1,5 +1,5 @@
 <p>
-  <b>Name:</b>
+  <b>名称:</b>
   <%=h @feedback.name %>
 </p>
 
@@ -9,10 +9,10 @@
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>内容:</b>
   <%=textilize_without_paragraph(@feedback.content) %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_feedback_path(@feedback) %> |
-<%= link_to 'Back', admin_feedbacks_path %>
+<%= link_to '修改', edit_admin_feedback_path(@feedback) %> |
+<%= link_to '退后', admin_feedbacks_path %>

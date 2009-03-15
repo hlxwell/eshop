@@ -1,13 +1,13 @@
 <p>
-  <b>Name:</b>
+  <b>新闻分类名称:</b>
   <%=h @news_category.name %>
 </p>
 
 <p>
-  <b>Parent:</b>
+  <b>隶属新闻分类ID:</b>
   <%=h @news_category.parent_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_news_category_path(@news_category) %> |
-<%= link_to 'Back', admin_news_categories_path %>
+<%= link_to '修改', edit_admin_news_category_path(@news_category) %> |
+<%= link_to '后退', admin_news_categories_path %>

@@ -1,18 +1,18 @@
-<h1>Listing news_categories</h1>
+<h1>新闻分类</h1>
 
-<table>
+<table border='1'>
   <tr>
-    <th>Name</th>
-    <th>Parent</th>
+    <th>名称</th>
+    <th>隶属新闻分类ID</th>
   </tr>
 
   <% for news_category in @news_categories %>
     <tr>
       <td><%=h news_category.name %></td>
       <td><%=h news_category.parent_id %></td>
-      <td><%= link_to 'Show', admin_news_category_path(news_category) %></td>
-      <td><%= link_to 'Edit', edit_admin_news_category_path(news_category) %></td>
-      <td><%= link_to 'Destroy', admin_news_category_path(news_category), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to '显示', admin_news_category_path(news_category) %></td>
+      <td><%= link_to '修改', edit_admin_news_category_path(news_category) %></td>
+      <td><%= link_to '删除', admin_news_category_path(news_category), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
@@ -40,4 +40,4 @@
     </script>
 <br />
 
-<%= link_to 'New news_category', new_admin_news_category_path %>
+<%= link_to '新建新闻分类', new_admin_news_category_path %>

@@ -1,14 +1,14 @@
-<h1>Editing news_category</h1>
+<h1>修改新闻分类</h1>
 
-<% form_for(@news_category,:url => admin_news_categorie_path(@news_category)) do |f| %>
+<% form_for(@news_category,:url => admin_news_category_path(@news_category)) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label "新闻分类名称" %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :parent_id %><br />
+    <%= f.label "隶属分类ID" %><br />
     <%= f.text_field :parent_id %>
   </p>
   <p>
@@ -36,9 +36,9 @@
     </script>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', admin_news_category_path(@news_category) %> |
-<%= link_to 'Back', admin_news_categories_path %>
+<%= link_to '显示', admin_news_category_path(@news_category) %> |
+<%= link_to '后退', admin_news_categories_path %>

@@ -1,24 +1,22 @@
-<h1>Listing feedbacks</h1>
+<h1>留言列表</h1>
 
 <table border='1'>
         <tr>
-                <th>Name</th>
+                <th>名称</th>
                 <th>Email</th>
-                <th>Product</th>
+                <th>内容</th>
         </tr>
 
         <% for feedback in @feedbacks %>
             <tr>
                     <td><%=h feedback.name %></td>
                     <td><%=h feedback.email %></td>
-                    <td><%=link_to(image_tag(feedback.product.pictures.first.public_filename(:small)),admin_product_path(feedback.product)) if feedback.product%></td>
-                    <td><%= link_to 'Show', admin_feedback_path(feedback) %></td>
-                    <td><%= link_to 'Edit', edit_admin_feedback_path(feedback) %></td>
-                    <td><%= link_to 'Destroy', admin_feedback_path(feedback), :confirm => 'Are you sure?', :method => :delete %></td>
+                    <td><%=h feedback.content %></td>
+                    <td><%= link_to '显示', admin_feedback_path(feedback) %></td>
+                    <td><%= link_to '修改', edit_admin_feedback_path(feedback) %></td>
+                    <td><%= link_to '删除', admin_feedback_path(feedback), :confirm => '确定删除?', :method => :delete %></td>
             </tr>
         <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New feedback', new_admin_feedback_path %>

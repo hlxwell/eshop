@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  layout 'news_topics'
 
     def index
         if params[:category]
@@ -6,7 +7,7 @@ class ProductsController < ApplicationController
         else
             @products = Product.paginate :page => params[:page], :order => 'created_at DESC'
         end
-
+        @news_categories = NewsCategory.all
         respond_to do |format|
             format.html # index.html.erb
         end
@@ -14,7 +15,7 @@ class ProductsController < ApplicationController
 
     def show
         @product = Product.find(params[:id])
-
+        @news_categories = NewsCategory.all
         respond_to do |format|
             format.html # show.html.erb
         end
@@ -26,7 +27,7 @@ class ProductsController < ApplicationController
         else
             @products = Product.paginate :page => params[:page], :order => 'created_at DESC'
         end
-
+        @news_categories = NewsCategory.all
         respond_to do |format|
             format.html {render :template=>"/products/index"}
         end

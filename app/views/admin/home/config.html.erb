@@ -1,17 +1,17 @@
-<h1>Config Login username and password</h1>
+<h1>设置后台登录账号和密码</h1>
 
 <% form_for(:login,:url=>{:controller=>'/admin/home', :action=>'set_login_info'}) do |f| %>
     <%= flash[:notice] %>
 
     <p>
-            <%= f.label :username %><br />
+            <%= f.label "用户名" %><br />
             <%= f.text_field :username %>
     </p>
     <p>
-            <%= f.label :password %><br />
+            <%= f.label "密码" %><br />
             <%= f.password_field :password %>
     </p>
     <p>
-            <%= f.submit "Create" %>
+            <%= f.submit "创建" %>
     </p>
 <% end %>
