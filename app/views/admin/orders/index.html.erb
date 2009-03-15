@@ -1,10 +1,10 @@
 <h1>订单列表</h1>
 
-<table border='1'>
+<table border='1' style="max-width:840px">
   <tr>
     <th>真实姓名</th>
     <th>身份证</th>
-    <th>房间类型ID</th>
+    <th>房间类型</th>
     <th>人数</th>
     <th>预住天数</th>
     <th>到达日期</th>
@@ -16,7 +16,7 @@
   <tr>
     <td><%=h order.realname %></td>
     <td><%=h order.idcard %></td>
-    <td><%=h order.product_id %></td>
+    <td><%=h order.product.name %></td>
     <td><%=h order.peoplenum %></td>
     <td><%=h order.days %></td>
     <td><%=h order.arrivaldate %></td>

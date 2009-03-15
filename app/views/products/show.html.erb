@@ -1,20 +1,18 @@
-<table width="780" border="0" align="center" cellpadding="0" cellspacing="5">
-        <tr>
-                <td width="200" valign="top">
-                        <%=render :partial=>'/shared/menu'%>
-                </td>
-                <td width="565" valign="top">
-                        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
-                                <tr>
-                                        <td class="content_title">Spring Jade </td>
-                                        <td align="right" valign="bottom" class="content_title">
-                                                <table width="100" border="0" cellpadding="0" cellspacing="5" class="product_nav">
-                                                        <tr>
-                                                                <td align="left">&lt; Prev   </td>
-                                                                <td align="right">Next &gt;</td>
-                                                        </tr>
-                                        </table></td>
-                                </tr>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="86" bgcolor="#E1E1D6">&nbsp;&nbsp;客房服务</td>
+  </tr>
+</table>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="28" align="center" background="../images/line.gif">&nbsp;
+    </td>
+  </tr>
+</table>
+<table width="510" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="padding-top:20px">
+      <table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
                                 <!--big picture-->
                                 <tr>
                                         <td height="118" colspan="2" valign="top">
@@ -41,28 +39,25 @@
                                                                 <span class="product_title"><%=h @product.name %></span></td>
                                                         </tr>
                                                         <tr>
-                                                                <td width="16%" align="right"><span class="property_title">Number</span></td>
+                                                                <td width="16%" align="right"><span class="property_title">价格</span></td>
                                                                 <td width="84%"><%=h @product.number %></td>
                                                         </tr>
                                                         <tr>
-                                                                <td align="right"><span class="property_title">Specification</span></td>
+                                                                <td align="right"><span class="property_title">规格</span></td>
                                                                 <td><%=h @product.specification %></td>
                                                         </tr>
                                                         <tr>
                                                                 <td align="right" valign="top">
-                                                                <span class="property_title">Description</span></td>
+                                                                <span class="property_title">描述</span></td>
                                                                 <td><%=@product.description %></td>
                                                         </tr>
                                                 </table>
-                                                <br>
-                                                <%=render_feedback_list(@product.id)  %>
                                                 <br/>
-                                                <%=render_new_feedback_form('product') %>
-                                                <br/>
-                                                <%=render_new_order_form('product') %>
+                                                <%=render_new_order_form(@product.id,'product') %>
                                         </td>
                                 </tr>
                         </table>
-                </td>
-        </tr>
+    </td>
+  </tr>
 </table>
+

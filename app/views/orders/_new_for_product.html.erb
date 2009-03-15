@@ -1,6 +1,6 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
         <tr>
-                <td class="content_title">订房</td>
+                <td colspan="2" bgcolor="#eeeeee"><span class="product_title">我要预定此房间</span></td>
         </tr>
         <tr>
                 <td height="118" valign="top">
@@ -44,7 +44,8 @@
                                     </tr>
                                     <tr>
                                             <td align="right" valign="top">
-                                            &nbsp;</td>
+                                              <%= f.hidden_field(:product_id,:value => @product_id) %>
+                                            </td>
                                             <td><%= f.submit "Create" %></td>
                                     </tr>
                             </table>

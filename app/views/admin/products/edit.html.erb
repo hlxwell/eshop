@@ -6,7 +6,7 @@
     <%= f.error_messages %>
 
     <p>
-            <%= f.label "房间分类ID" %><br />
+            <%= f.label "房间分类" %><br />
             <%= f.select :category_id,Category.find(:all).collect {|c| [ c.name, c.id ] } %>
     </p>
     <p>

@@ -21,8 +21,9 @@ module ApplicationHelper
         end
     end
 
-    def render_new_order_form(type=nil)
-        @order = Order.new
+    def render_new_order_form(product_id,type=nil)
+      @order = Order.new()
+      @product_id = product_id.to_s
         if type == 'product'
             render :partial=>'/orders/new_for_product'
         else

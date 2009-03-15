@@ -12,8 +12,8 @@
     <%= f.text_field :idcard %>
   </p>
   <p>
-    <%= f.label "房间类型ID" %><br />
-    <%= f.text_field :product_id %>
+    <%= f.label "房间类型" %><br />
+    <%= f.select :product_id,Product.find(:all).collect {|c| [ c.name, c.id ] } %>
   </p>
   <p>
     <%= f.label "人数" %><br />

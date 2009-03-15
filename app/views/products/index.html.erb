@@ -1,19 +1,18 @@
-<table width="780" border="0" align="center" cellpadding="0" cellspacing="5">
-        <tr>
-                <td width="200" valign="top">
-                        <%=render :partial=>'/shared/menu' %>
-                </td>
-                <td width="565" valign="top">
-                        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
-                                <tr>
-                                        <td class="content_title"> Products </td>
-                                </tr>
-                                <tr>
-                                        <td align="center" valign="top">
-                                                <%=@products.size==0 ? '<font color=red>Sorry! No data!</font>' : render(:partial=>'product_list')%>
-                                        </td>
-                                </tr>
-                        </table>
-                </td>
-        </tr>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="86" bgcolor="#E1E1D6">&nbsp;&nbsp;客房服务</td>
+  </tr>
+</table>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="28" align="center" background="../images/line.gif">&nbsp;
+    </td>
+  </tr>
+</table>
+<table width="510" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="padding-top:20px">
+      <%=@products.size==0 ? '<font color=red>对不起，暂时没有信息！</font>' : render(:partial=>'product_list')%>
+    </td>
+  </tr>
 </table>
