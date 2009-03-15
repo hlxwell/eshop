@@ -28,9 +28,9 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: kaixin2009
+  database: eshop
   username: root
-  password: 123
+  password: 
   host: localhost
 
 production:

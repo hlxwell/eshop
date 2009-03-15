@@ -1,24 +1,27 @@
-<table width="780" border="0" align="center" cellpadding="0" cellspacing="5">
-        <tr>
-                <td width="200" valign="top">
-                        <%=render :partial=>'/shared/menu' %>
-                </td>
-                <td width="565" valign="top">
-                        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="content_border">
-                                <tr>
-                                        <td class="content_title" width="92%">
-                                                <%=h @news_topic.title %>
-                                        </td>
-                                        <td>
-                                                <%= link_to 'Back', news_topics_path %>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td colspan="2">
-                                                <%= @news_topic.body %>
-                                        </td>
-                                </tr>
-                        </table>
-                </td>
-        </tr>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="86" bgcolor="#E1E1D6"><img src="../images/newscenter_title.jpg" alt="新闻中心" width="94" height="28" hspace="25" /></td>
+  </tr>
+</table>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="28" align="center" background="../images/line.gif">
+      <a href="/news_categories">所有新闻</a>
+      <%=" | " if !@news_categories.blank? %>
+      <% for news_category in @news_categories %>
+        <%= link_to h(news_category.name), news_category %>
+        <%=" | " if news_category!=@news_categories.last %>
+      <%end%>
+    </td>
+  </tr>
+</table>
+<table width="510" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="padding-top:10px">
+      <div>
+        <div align="center"><h2><%= @news_topic.title %></h2></div>
+        <div><%= @news_topic.body %></div>
+      </div>
+    </td>
+  </tr>
 </table>

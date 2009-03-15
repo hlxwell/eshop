@@ -1,17 +1,17 @@
-<h1>Please Login</h1>
+<h1>请登录</h1>
 
 <% form_for(:login,:url=>{:controller=>'/admin/home', :action=>'login'}) do |f| %>
     <%= flash[:notice] %>
 
     <p>
-            <%= f.label :username %><br />
+            <%= f.label "用户名" %><br />
             <%= f.text_field :username %>
     </p>
     <p>
-            <%= f.label :password %><br />
+            <%= f.label "密码" %><br />
             <%= f.password_field :password %>
     </p>
     <p>
-            <%= f.submit "Login" %>
+            <%= f.submit "登录" %>
     </p>
 <% end %>

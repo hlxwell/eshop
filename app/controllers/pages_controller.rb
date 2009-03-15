@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  layout 'news_topics'
     def index
     end
 

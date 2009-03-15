@@ -1,10 +1,10 @@
-<h1>Editing feedback</h1>
+<h1>修改留言</h1>
 
 <% form_for(@feedback,:url=>admin_feedback_path(@feedback),:method=>:put) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label "名称" %><br />
     <%= f.text_field :name %>
   </p>
   <p>
@@ -12,13 +12,13 @@
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :content %><br />
+    <%= f.label "留言内容" %><br />
     <%= fckeditor_textarea("feedback", "content", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @feedback %> |
-<%= link_to 'Back', admin_feedbacks_path %>
+<%= link_to '显示', @feedback %> |
+<%= link_to '后退', admin_feedbacks_path %>

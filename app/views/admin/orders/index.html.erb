@@ -1,14 +1,14 @@
-<h1>Listing orders</h1>
+<h1>订单列表</h1>
 
-<table>
+<table border='1'>
   <tr>
-    <th>Realname</th>
-    <th>Idcard</th>
-    <th>Product</th>
-    <th>Peoplenum</th>
-    <th>Days</th>
-    <th>Arrivaldate</th>
-    <th>Contact</th>
+    <th>真实姓名</th>
+    <th>身份证</th>
+    <th>房间类型ID</th>
+    <th>人数</th>
+    <th>预住天数</th>
+    <th>到达日期</th>
+    <th>联系方式</th>
     <th>Email</th>
   </tr>
 
@@ -22,13 +22,13 @@
     <td><%=h order.arrivaldate %></td>
     <td><%=h order.contact %></td>
     <td><%=h order.email %></td>
-    <td><%= link_to 'Show', admin_order_path(order) %></td>
-    <td><%= link_to 'Edit', edit_admin_order_path(order) %></td>
-    <td><%= link_to 'Destroy', admin_order_path(order), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to '显示', admin_order_path(order) %></td>
+    <td><%= link_to '修改', edit_admin_order_path(order) %></td>
+    <td><%= link_to '删除', admin_order_path(order), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New order', new_admin_order_path %>
+<%= link_to '新订单', new_admin_order_path %>

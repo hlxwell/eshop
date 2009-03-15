@@ -1,4 +1,5 @@
 class FeedbacksController < ApplicationController
+    layout 'news_topics'
 
     def index
         @feedback = Feedback.new
@@ -14,7 +15,7 @@ class FeedbacksController < ApplicationController
 
         respond_to do |format|
             if @feedback.save
-                flash[:notice] = 'Feedback was successfully created.'
+                flash[:notice] = '留言成功，谢谢您留下宝贵的意见。'
                 format.html {
                     if params[:product_id]
                         redirect_to(product_path(params[:product_id]))

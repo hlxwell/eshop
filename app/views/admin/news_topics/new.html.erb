@@ -1,20 +1,20 @@
 <%= javascript_include_tag :fckeditor %>
 
-<h1>New news_topic</h1>
+<h1>新建新闻</h1>
 
 <% form_for(@news_topic,:url=>admin_news_topics_path) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :title %><br />
+    <%= f.label "标题" %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :body %><br />
+    <%= f.label "内容" %><br />
     <%= fckeditor_textarea("news_topic", "body", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
   </p>
   <p>
-    <%= f.label :news_category_id %><br />
+    <%= f.label "隶属新闻分类" %><br />
     <%= f.hidden_field :news_category_id,:value => @news_categories.first.id if !@news_categories.blank? %>
   </p>
   <p>
@@ -42,8 +42,8 @@
     </script>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "创建" %>
   </p>
 <% end %>
 
-<%= link_to 'Back', admin_news_topics_path %>
+<%= link_to '后退', admin_news_topics_path %>

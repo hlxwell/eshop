@@ -1,8 +1,10 @@
 class NewsCategoriesController < ApplicationController
+  layout 'news_topics'
   # GET /news_categories
   # GET /news_categories.xml
   def index
-    @news_categories = NewsCategory.find(:all)
+    @news_categories = NewsCategory.all
+    @news_topics = NewsTopic.find(:all,:order => 'id desc')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +15,9 @@ class NewsCategoriesController < ApplicationController
   # GET /news_categories/1
   # GET /news_categories/1.xml
   def show
-    @news_category = NewsCategory.find(params[:id])
+    @news_categories = NewsCategory.all
+    @news_topics = NewsTopic.find(:all,:order => 'id desc',
+      :conditions => ["news_category_id=?",params[:id]])
 
     respond_to do |format|
       format.html # show.html.erb

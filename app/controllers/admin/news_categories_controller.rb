@@ -47,7 +47,7 @@ class Admin::NewsCategoriesController < ApplicationController
     respond_to do |format|
       if @news_category.save
         flash[:notice] = 'NewsCategory was successfully created.'
-        format.html { redirect_to(@news_category) }
+        format.html { redirect_to(admin_news_categories_path) }
         format.xml  { render :xml => @news_category, :status => :created, :location => @news_category }
       else
         format.html { render :action => "new" }
@@ -64,7 +64,7 @@ class Admin::NewsCategoriesController < ApplicationController
     respond_to do |format|
       if @news_category.update_attributes(params[:news_category])
         flash[:notice] = 'NewsCategory was successfully updated.'
-        format.html { redirect_to(@news_category) }
+        format.html { redirect_to(admin_news_categories_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -80,7 +80,7 @@ class Admin::NewsCategoriesController < ApplicationController
     @news_category.destroy
 
     respond_to do |format|
-      format.html { redirect_to(news_categories_url) }
+      format.html { redirect_to(admin_news_categories_path) }
       format.xml  { head :ok }
     end
   end

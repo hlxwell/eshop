@@ -1,13 +1,13 @@
 <p>
-  <b>Title:</b>
+  <b>标题:</b>
   <%=h @news_topic.title %>
 </p>
 
 <p>
-  <b>Body:</b>
+  <b>内容:</b>
   <%= @news_topic.body %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_news_topic_path(@news_topic) %> |
-<%= link_to 'Back', admin_news_topics_path %>
+<%= link_to '修改', edit_admin_news_topic_path(@news_topic) %> |
+<%= link_to '后退', admin_news_topics_path %>

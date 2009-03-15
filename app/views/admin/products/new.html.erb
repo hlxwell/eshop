@@ -1,31 +1,35 @@
 <%= javascript_include_tag :fckeditor %>
 
-<h1>New product</h1>
-<h4>First Step: Fill the product form.</h4>
+<h1>新建房间</h1>
+<h4>第一步：填写房间相关内容</h4>
 
 <% form_for(@product, :url=>admin_products_path,:method=>:post) do |f| %>
     <%= f.error_messages %>
 
     <p>
-            <%= f.label :category %><br />
+            <%= f.label "房间分类ID" %><br />
             <%= f.select :category_id,Category.find(:all).collect {|c| [ c.name, c.id ] } %>
     </p>
     <p>
-            <%= f.label :name %><br />
+            <%= f.label "名称" %><br />
             <%= f.text_field :name %>
     </p>
     <p>
-            <%= f.label :specification %><br />
+            <%= f.label "价格" %><br />
+            <%= f.text_field :number %>
+    </p>
+    <p>
+            <%= f.label "规格" %><br />
             <%= f.text_field :specification %>
     </p>
     <p>
-            <%= f.label :description %><br />
+            <%= f.label "描述" %><br />
             <%= fckeditor_textarea("product", "description", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
     </p>
 
     <p>
-            <%= f.submit "next" %>
+            <%= f.submit "下一步" %>
     </p>
 <% end %>
 
-<%= link_to 'Back', admin_products_path %>
+<%= link_to '后退', admin_products_path %>
