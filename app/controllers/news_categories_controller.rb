@@ -1,5 +1,5 @@
 class NewsCategoriesController < ApplicationController
-  layout 'news_topics'
+layout proc{ |controller| controller.params[:en] ? "enmain" : "cnmain" }
   # GET /news_categories
   # GET /news_categories.xml
   def index
