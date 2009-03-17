@@ -1,7 +1,11 @@
 class ProductsController < ApplicationController
-  layout 'news_topics'
+layout proc{ |controller| controller.params[:en] ? "enmain" : "cnmain" }
 
     def index
+      if params[:lang]=='en'
+        layout 'enmain'
+      end
+
         if params[:category]
             @products = Product.paginate_by_category_id params[:category],:page => params[:page], :order => 'created_at DESC'
         else
@@ -31,5 +35,8 @@ class ProductsController < ApplicationController
         respond_to do |format|
             format.html {render :template=>"/products/index"}
         end
+    end
+    def en
+      
     end
 end

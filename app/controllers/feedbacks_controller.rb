@@ -1,5 +1,5 @@
 class FeedbacksController < ApplicationController
-    layout 'news_topics'
+layout proc{ |controller| controller.params[:en] ? "enmain" : "cnmain" }
 
     def index
         @feedback = Feedback.new

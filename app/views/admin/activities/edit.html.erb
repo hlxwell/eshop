@@ -1,0 +1,32 @@
+<h1>修改活动</h1>
+
+<% form_for(@activity,:url => admin_activity_path(@activity)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "活动名称" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label "活动描述" %><br />
+    <%= f.text_field :description %>
+  </p>
+    <% for pic in @activity.activities_pictures %>
+        <p id="picture_<%=pic.id%>">
+                <%=link_to image_tag(pic.public_filename(:small)),pic.public_filename()  %>
+                <%=link_to_remote '删除',:url=>admin_activity_activities_picture_path(@activity,pic),:method=>:delete%>
+        </p>
+    <% end %>
+    <p>
+    <%= link_to '修改照片名称与描述',edit_images_admin_activity_path(@activity) %>
+    </p>
+    <p>
+    <%=link_to '上传照片',upload_picture_admin_activity_path(@activity) %>
+    </p>
+    <p>
+            <%= f.submit "更新" %>
+    </p>
+<% end %>
+
+<%= link_to '显示', @activity %> |
+<%= link_to '后退', activities_path %>

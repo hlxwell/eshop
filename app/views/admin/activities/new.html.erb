@@ -1,0 +1,22 @@
+<%= javascript_include_tag :fckeditor %>
+
+<h1>添加活动</h1>
+<h4>第一步：填写房间相关内容</h4>
+
+<% form_for(@activity,:url=>admin_activities_path,:method=>:post) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "活动名称" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label "活动描述" %><br />
+    <%= fckeditor_textarea("activity", "description", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
+  </p>
+  <p>
+    <%= f.submit "下一步" %>
+  </p>
+<% end %>
+
+<%= link_to '后退', activities_path %>

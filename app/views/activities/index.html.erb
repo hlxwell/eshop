@@ -1,0 +1,18 @@
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="86" bgcolor="#E1E1D6">&nbsp;&nbsp;预定活动</td>
+  </tr>
+</table>
+<table width="570" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="28" align="center" background="../images/line.gif">&nbsp;
+    </td>
+  </tr>
+</table>
+<table width="510" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="padding-top:20px">
+      <%=@activities.size==0 ? '<font color=red>对不起，暂时没有信息！</font>' : render(:partial=>'activity_list')%>
+    </td>
+  </tr>
+</table>

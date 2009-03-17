@@ -1,0 +1,22 @@
+<h1>活动列表</h1>
+
+<table border='1'>
+  <tr>
+    <th>活动名称</th>
+    <th>活动描述</th>
+  </tr>
+
+<% for activity in @activities %>
+  <tr>
+    <td><%=h activity.name %></td>
+    <td><%=h activity.description %></td>
+    <td><%= link_to '显示', admin_activity_path(activity) %></td>
+    <td><%= link_to '修改', edit_admin_activity_path(activity) %></td>
+    <td><%= link_to '删除', admin_activity_path(activity), :confirm => '确定要删除?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新建活动', new_admin_activity_path %>

@@ -9,7 +9,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090311132153) do
+ActiveRecord::Schema.define(:version => 20090317035006) do
+
+  create_table "activities", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activities_pictures", :force => true do |t|
+    t.integer  "activity_id"
+    t.integer  "parent_id"
+    t.string   "filename"
+    t.integer  "size"
+    t.string   "content_type"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "thumbnail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"

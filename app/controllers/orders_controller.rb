@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  layout 'news_topics'
+layout proc{ |controller| controller.params[:en] ? "enmain" : "cnmain" }
   # GET /orders
   # GET /orders.xml
   def show

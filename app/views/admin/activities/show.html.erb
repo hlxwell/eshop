@@ -1,0 +1,18 @@
+<p>
+  <b>活动名称:</b>
+  <%=h @activity.name %>
+</p>
+
+<p>
+  <b>活动描述:</b>
+  <%=h @activity.description %>
+</p>
+
+<% for pic in @activity.activities_pictures %>
+    <p>
+            <%=link_to(image_tag(pic.public_filename(:small)),pic.public_filename()) %>
+    </p>
+<% end %>
+
+<%= link_to '修改', edit_admin_activity_path(@activity) %> |
+<%= link_to '后退', admin_activities_path %>
