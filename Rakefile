@@ -8,3 +8,8 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+require 'vlad'
+Vlad.load :app => 'passenger'
+Vlad.load :scm => :git
+task 'ezupdate'=> ['vlad:update', 'vlad:migrate','vlad:start_app']
