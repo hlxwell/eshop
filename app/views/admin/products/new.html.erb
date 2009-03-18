@@ -15,10 +15,6 @@
             <%= f.text_field :name %>
     </p>
     <p>
-            <%= f.label "规格" %><br />
-            <%= f.text_field :specification %>
-    </p>
-    <p>
             <%= f.label "描述" %><br />
             <%= fckeditor_textarea("product", "description", :toolbarSet => 'Simple', :width => '600px', :height => '500px') %>
     </p>
