@@ -21,13 +21,9 @@
                                 <tr>
                                         <td colspan="2" align="center" valign="top">
                                                 <% for pic in @product.pictures %>
-                                                    <table class="product_item" border="0" cellspacing="5" cellpadding="0">
-                                                            <tr>
-                                                                    <td>
+                                                    <div style="width:130px;height:130px;float:left">
                                                                             <%=link_to(image_tag(pic.public_filename(:small),:border=>0),pic.public_filename()) %>
-                                                                    </td>
-                                                            </tr>
-                                                    </table>
+                                                    </div>
                                                 <% end %>
                                         </td>
                                 </tr>
@@ -41,10 +37,6 @@
                                                         <tr>
                                                                 <td width="16%" align="right"><span class="property_title">编号</span></td>
                                                                 <td width="84%"><%=h @product.number %></td>
-                                                        </tr>
-                                                        <tr>
-                                                                <td align="right"><span class="property_title">规格</span></td>
-                                                                <td><%=h @product.specification %></td>
                                                         </tr>
                                                         <tr>
                                                                 <td align="right" valign="top">
