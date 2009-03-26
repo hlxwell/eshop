@@ -7,16 +7,16 @@
 <meta name="keywords" content="广东酒店、广州酒店、广州鸣泉居度假村、酒店客房预订、商务会议、豪华婚宴、">
 <meta name="description" content="广东酒店、广州酒店、广州鸣泉居度假村、酒店客房预订、商务会议、豪华婚宴、">
 <title>Guangzhou Oriental Resort – Real Time Online Booking</title>
-<link href="../css/mq.css" rel="stylesheet" type="text/css" />
+<link href="/css/mq.css" rel="stylesheet" type="text/css" />
 <script language=JavaScript1.1>
 <!--
 var slidespeed=3000
 var slideimages=new Array()
 var slidelinks=new Array("","","")
-      slideimages[0] = "../images/guestroom_pic02a.jpg"
-      slideimages[1] = "../images/guestroom_pic02b.jpg"
-      slideimages[2] = "../images/guestroom_pic02c.jpg"
-	  slideimages[3] = "../images/guestroom_pic02d.jpg"
+      slideimages[0] = "/images/guestroom_pic02a.jpg"
+      slideimages[1] = "/images/guestroom_pic02b.jpg"
+      slideimages[2] = "/images/guestroom_pic02c.jpg"
+	  slideimages[3] = "/images/guestroom_pic02d.jpg"
 
 var newwindow=1 //open links in new window? 1=yes, 0=no
 var imageholder=new Array()
@@ -27,30 +27,17 @@ imageholder[i].src=slideimages[i]
 }
 //}
 
-function FormMenu(targ,selObj,restore)
-{ eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-if (restore) selObj.selectedIndex=0; }
 //-->
 </script>
-<script language="JavaScript" type="text/JavaScript">
-var hotelCode="00441", language="enu";
-function onLoadWebNews()
-{
-	top.location="/hcrm/"+language+"/hotelhome/"+hotelCode+"/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=1";
-}
-function onLoadPromotions()
-{
-	top.location="/hcrm/"+language+"/hotelhome/"+hotelCode+"/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=0";
-}
-</script>
+
 </head>
 
 <body>
 <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-        <td><img src="../images/mq_top01.jpg" width="322" height="143" /></td>
-        <td><a href="reservation.html"><img src="../images/mq_top02.jpg" alt="Guangzhou Oriental Resort" width="104" height="143" border="0" /></a></td>
-        <td><img src="../images/mq_top03.jpg" width="352" height="143" /></td>
+        <td><img src="/images/mq_top01.jpg" width="322" height="143" /></td>
+        <td><a href="/cn/reservation.html"><img src="/images/mq_top02.jpg" alt="Guangzhou Oriental Resort" width="104" height="143" border="0" /></a></td>
+        <td><img src="/images/mq_top03.jpg" width="352" height="143" /></td>
     </tr>
 </table>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#A5A99B">
@@ -59,29 +46,24 @@ function onLoadPromotions()
 
             <table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#1D2D2A">
                 <tr>
-                    <td width="60" height="25" align="center"><a href="/en/reservation.html" class="h7">HOME</a></td>
+                    <td width="60" height="25" align="center"><a href="/pages/reservation" class="h7">HOME</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="90" align="center"><a href="/pages/aboutus?en=true" class="h7">ABOUT US</a></td>
+                    <td width="90" align="center"><a href="/pages/aboutus" class="h7">ABOUT US</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="100" align="center"><a href="/news_topics?en=true" class="h7">NEWS CENTER</a></td>
-
+                    <td width="100" align="center"><a href="/news_topics" class="h7">NEWS CENTER</a></td>
                     <td width="3" class="h1">|</td>
-                    <td width="105" align="center"><a href="/products?en=true" class="h7">GUEST ROOMS</a></td>
+                    <td width="105" align="center"><a href="/products" class="h7">GUEST ROOMS</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="65" align="center"><a href="/en/meeting.html" class="h7">MEETINGS</a></td>
+                    <td width="95" align="center"><a href="/pages/restaurants" class="h7">RESTAURANTS</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="95" align="center"><a href="/en/restaurants.html" class="h7">RESTAURANTS</a></td>
-
+                    <td width="115" align="center"><a href="/pages/sportscenter" class="h7">SPORTS CENTER</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="115" align="center"><a href="/en/sportscenter.html" class="h7">SPORTS CENTER</a></td>
+                    <td width="80" align="center"><a href="/pages/special" class="h7">NINGYUAN SPECIALTIES</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="80" align="center"><a href="/en/navigation.html" class="h7">NINGYUAN SPECIALTIES</a></td>
+                    <td width="80" align="center"><a href="/feedbacks" class="h7">FEEDBACK</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="80" align="center"><a href="/feedbacks?en=true" class="h7">FEEDBACK</a></td>
-
-                    <td width="1" class="h1">|</td>
-                    <td width="65" align="center"><a href="/pages/contactus?en=true" class="h7">CONTACTS</a></td>
-                    <td width="53" align="right" style="padding-right:8px"><a href="../cn/reservation.html" class="h1">中文</a></td>
+                    <td width="65" align="center"><a href="/pages/contactus" class="h7">CONTACTS</a></td>
+                    <td width="53" align="right" style="padding-right:8px"><a href="/pages/lang" class="h1">中文</a></td>
                 </tr>
             </table>
         </td>
@@ -90,7 +72,7 @@ function onLoadPromotions()
 </table>
 <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-        <td><img src="../images/reservation_epic06.jpg" alt="News Center" width="778" height="294" /></td>
+        <td><img src="/images/reservation_epic06.jpg" alt="News Center" width="778" height="294" /></td>
     </tr>
 </table>
 <table width="778" border="0" align="center" cellpadding="0" cellspacing="0">

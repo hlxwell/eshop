@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :orders,:collection => {
+    :restaurants => :get,
+    :sportscenter => :get,
+    :special => :get,
+    :aboutus => :get,
+    :contactus => :get,
+    :lang => :get,
+    :reservation => :get
+  }
+
   map.resources :activities, :collection=>{:en => :get,:enshow => :get}
 
   map.resources :orders

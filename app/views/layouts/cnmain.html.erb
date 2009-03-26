@@ -10,38 +10,8 @@
 <link href="../css/mq.css" rel="stylesheet" type="text/css" />
 <script language=JavaScript1.1>
 <!--
-var slidespeed=3000
-var slideimages=new Array()
-var slidelinks=new Array("","","")
-      slideimages[0] = "../images/guestroom_pic02a.jpg"
-      slideimages[1] = "../images/guestroom_pic02b.jpg"
-      slideimages[2] = "../images/guestroom_pic02c.jpg"
-	  slideimages[3] = "../images/guestroom_pic02d.jpg"
 
-var newwindow=1 //open links in new window? 1=yes, 0=no
-var imageholder=new Array()
-var ie=document.all
-for (i=0;i<slideimages.length;i++){
-imageholder[i]=new Image()
-imageholder[i].src=slideimages[i]
-}
-//}
-
-function FormMenu(targ,selObj,restore)
-{ eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-if (restore) selObj.selectedIndex=0; }
 //-->
-</script>
-<script language="JavaScript" type="text/JavaScript">
-var hotelCode="00441", language="chs";
-function onLoadWebNews()
-{
-	top.location="/hcrm/chs/hotelhome/"+hotelCode+"/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=1";
-}
-function onLoadPromotions()
-{
-	top.location="/hcrm/chs/hotelhome/"+hotelCode+"/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=0";
-}
 </script>
 </head>
 
@@ -58,7 +28,7 @@ function onLoadPromotions()
         <td>
             <table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#1D2D2A">
                 <tr>
-                    <td width="60" height="25" align="center"><a href="reservation.html" class="h1">首页</a></td>
+                    <td width="60" height="25" align="center"><a href="/pages/reservation" class="h1">首页</a></td>
                     <td width="1" class="h1">|</td>
                     <td width="70" align="center"><a href="/pages/aboutus" class="h1">关于我们</a></td>
 					<td width="1" class="h1">|</td>
@@ -66,20 +36,18 @@ function onLoadPromotions()
                     <td width="1" class="h1">|</td>
                     <td width="70" align="center"><a href="/products" class="h1">客房服务</a></td>
 					<td width="1" class="h1">|</td>
-                    <td width="70" align="center"><a href="/cn/meeting.html" class="h1">会议中心</a></td>
+                    <td width="70" align="center"><a href="/pages/restaurants" class="h1">餐饮服务</a></td>
                     <td width="1" class="h1">|</td>
-                    <td width="70" align="center"><a href="/cn/restaurants.html" class="h1">餐饮服务</a></td>
-                    <td width="1" class="h1">|</td>
-                    <td width="63" align="center"><a href="/cn/sportscenter.html" class="h1">娱乐设施</a></td>
+                    <td width="63" align="center"><a href="/pages/sportscenter" class="h1">娱乐设施</a></td>
 					<td width="1" class="h1">|</td>
                     <td width="63" align="center"><a href="/activities" class="h1">预定活动</a></td>
 					<td width="1" class="h1">|</td>
-                    <td width="70" align="center"><a href="/cn/navigation.html" class="h1">宁远特产</a></td>
+                    <td width="70" align="center"><a href="/pages/special" class="h1">宁远特产</a></td>
 					<td width="1" class="h1">|</td>
                     <td width="70" align="center"><a href="/feedbacks" class="h1">留言板</a></td>
 					<td width="1" class="h1">|</td>
                     <td width="70" align="center"><a href="/pages/contactus" class="h1">联系我们</a></td>
-                    <td width="135" align="right" style="padding-right:12px"><a href="../en/reservation.html" class="h1">English</a></td>
+                    <td width="135" align="right" style="padding-right:12px"><a href="/pages/lang?en=true" class="h1">English</a></td>
                 </tr>
             </table>
         </td>
