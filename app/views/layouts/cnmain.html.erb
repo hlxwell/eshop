@@ -10,38 +10,8 @@
 <link href="../css/mq.css" rel="stylesheet" type="text/css" />
 <script language=JavaScript1.1>
 <!--
-var slidespeed=3000
-var slideimages=new Array()
-var slidelinks=new Array("","","")
-      slideimages[0] = "../images/guestroom_pic02a.jpg"
-      slideimages[1] = "../images/guestroom_pic02b.jpg"
-      slideimages[2] = "../images/guestroom_pic02c.jpg"
-	  slideimages[3] = "../images/guestroom_pic02d.jpg"
 
-var newwindow=1 //open links in new window? 1=yes, 0=no
-var imageholder=new Array()
-var ie=document.all
-for (i=0;i<slideimages.length;i++){
-imageholder[i]=new Image()
-imageholder[i].src=slideimages[i]
-}
-//}
-
-function FormMenu(targ,selObj,restore)
-{ eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-if (restore) selObj.selectedIndex=0; }
 //-->
-</script>
-<script language="JavaScript" type="text/JavaScript">
-var hotelCode="00441", language="chs";
-function onLoadWebNews()
-{
-	top.location="/hcrm/chs/hotelhome/"+hotelCode+"/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=1";
-}
-function onLoadPromotions()
-{
-	top.location="/hcrm/chs/hotelhome/"+hotelCode+"/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=0";
-}
 </script>
 </head>
 

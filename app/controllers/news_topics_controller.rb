@@ -1,5 +1,5 @@
 class NewsTopicsController < ApplicationController
-  layout proc{ |controller| controller.params[:en] ? "enmain" : "cnmain" }
+  layout proc{ |controller| controller.session[:en] ? "enmain" : "cnmain" }
 
   def index
     @news_categories = NewsCategory.all

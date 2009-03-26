@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-layout proc{ |controller| controller.params[:en] ? "enmain" : "cnmain" }
+layout proc{ |controller| controller.session[:en] ? "enmain" : "cnmain" }
   # GET /activities
   # GET /activities.xml
   def index
