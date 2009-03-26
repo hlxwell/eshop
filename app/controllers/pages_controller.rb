@@ -1,14 +1,11 @@
 class PagesController < ApplicationController
   layout proc{ |controller| 
     if controller.action_name !='reservation'
-       controller.session[:en] ? "enmain" : "cnmain"
+      controller.session[:en] ? "enmain" : "cnmain"
     else
       nil
     end
-
-    }
-  def index
-  end
+  }
 
   def contactus
   end
