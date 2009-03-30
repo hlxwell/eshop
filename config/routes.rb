@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
     :reservation => :get
   }
 
-  map.resources :activities, :collection=>{:en => :get,:enshow => :get}
+  map.resources :activities
 
   map.resources :orders
 

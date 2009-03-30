@@ -1,32 +1,30 @@
 class PagesController < ApplicationController
   layout proc{ |controller| 
-    if controller.action_name !='reservation'
       controller.session[:en] ? "enmain" : "cnmain"
-    else
-      nil
-    end
   }
 
   def contactus
+    @headpic=10
   end
 
   def aboutus
+    @headpic=2
   end
 
   def restaurants
-
+    @headpic=5
   end
   
   def sportscenter
-
+    @headpic=6
   end
   
   def special
-
+    @headpic=8
   end
   
   def reservation
-
+    @headpic=1
   end
   
   def lang

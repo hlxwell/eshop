@@ -3,6 +3,7 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.xml
   def index
+    @headpic=7
     @activities = Activity.paginate :page => params[:page], :order => 'created_at DESC'
 
     respond_to do |format|
@@ -13,6 +14,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/1
   # GET /activities/1.xml
   def show
+    @headpic=7
     @activity = Activity.find(params[:id])
 
     respond_to do |format|

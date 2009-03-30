@@ -2,6 +2,7 @@ class NewsTopicsController < ApplicationController
   layout proc{ |controller| controller.session[:en] ? "enmain" : "cnmain" }
 
   def index
+    @headpic=3
     @news_categories = NewsCategory.all
     @news_topics = NewsTopic.find(:all,:order => 'id desc')
     respond_to do |format|
@@ -10,6 +11,7 @@ class NewsTopicsController < ApplicationController
   end
 
   def show
+    @headpic=3
     @news_categories = NewsCategory.all
     @news_topic = NewsTopic.find(params[:id])
     respond_to do |format|

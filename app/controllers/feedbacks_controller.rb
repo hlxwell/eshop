@@ -2,6 +2,7 @@ class FeedbacksController < ApplicationController
   layout proc{ |controller| controller.session[:en] ? "enmain" : "cnmain" }
 
   def index
+    @headpic=9
     @feedback = Feedback.new
     @feedbacks = Feedback.find(:all)
 
@@ -11,6 +12,7 @@ class FeedbacksController < ApplicationController
   end
 
   def create
+    @headpic=9  
     @feedback = Feedback.new(params[:feedback].merge(:product_id=>params[:product_id]))
 
     respond_to do |format|

@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   layout proc{ |controller| controller.session[:en] ? "enmain" : "cnmain" }
 
   def index
+    @headpic=4
     if params[:lang]=='en'
       layout 'enmain'
     end
@@ -18,6 +19,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @headpic=4
     @product = Product.find(params[:id])
     @news_categories = NewsCategory.all
     respond_to do |format|
@@ -26,6 +28,7 @@ class ProductsController < ApplicationController
   end
 
   def search
+    @headpic=4
     if params[:search][:words]
       @products = Product.paginate :conditions=>["name like ?","%#{params[:search][:words]}%"],:page => params[:page], :order => 'created_at DESC'
     else
@@ -35,8 +38,5 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html {render :template=>"/products/index"}
     end
-  end
-  def en
-      
   end
 end
