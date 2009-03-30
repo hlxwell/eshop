@@ -1,32 +1,32 @@
 <table width="780" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td width="195"><img src="/images/logo.jpg" width="195" height="52" /></td>
+    <td width="565" valign="bottom">
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
         <tr>
-                <td width="195"><img src="/images/logo.jpg" width="195" height="52" /></td>
-                <td width="565" valign="bottom">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
-                                <tr>
-                                        <% form_for :search,:url=>search_products_path do |f| %>
-                                                <td align="right">
-                                                        <label><%=f.text_field :words%></label>
-                                                        <input type="submit" name="Submit" value="GO" />
-                                                </td>
-                                        <% end %>
-                                </tr>
-                        </table>
-                        <table border="0" cellpadding="0" cellspacing="5" bgcolor="#eeeeee" class="menu">
-                                <tr>
-                                        <td align="center" width="110" class="<%='current_menu' if params[:controller]=='pages' and params[:action]=='index' %>"><a href="/">Home</a></td>
-                                        <td align="center" width="110" class="<%='current_menu' if params[:controller]=='news_topics' and params[:action]=='index' %>"><a href="/news_topics/">News</a></td>
-                                        <td align="center" width="110" class="<%='current_menu' if params[:controller]=='products' and params[:action]=='index' %>"><a href="/products/">Products</a></td>
-                                        <td align="center" width="110" class="<%='current_menu' if params[:controller]=='pages' and params[:action]=='aboutus' %>"><a href="/pages/aboutus">About US</a></td>
-                                        <td align="center" width="110" class="<%='current_menu' if params[:controller]=='pages' and params[:action]=='contactus' %>"><a href="/pages/contactus">Contact US </a></td>
-                                        <td align="center" width="110" class="<%='current_menu' if params[:controller]=='feedbacks' and params[:action]=='index' %>"><a href="/feedbacks">Feedback</a></td>
-                                </tr>
-                        </table>
-                </td>
+          <% form_for :search,:url=>search_products_path do |f| %>
+            <td align="right">
+              <label><%=f.text_field :words%></label>
+              <input type="submit" name="Submit" value="GO" />
+            </td>
+          <% end %>
         </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="5" bgcolor="#eeeeee" class="menu">
+        <tr>
+          <td align="center" width="110" class="<%='current_menu' if params[:controller]=='pages' and params[:action]=='index' %>"><a href="/">Home</a></td>
+          <td align="center" width="110" class="<%='current_menu' if params[:controller]=='news_topics' and params[:action]=='index' %>"><a href="/news_topics/">News</a></td>
+          <td align="center" width="110" class="<%='current_menu' if params[:controller]=='products' and params[:action]=='index' %>"><a href="/products/">Products</a></td>
+          <td align="center" width="110" class="<%='current_menu' if params[:controller]=='pages' and params[:action]=='aboutus' %>"><a href="/pages/aboutus">About US</a></td>
+          <td align="center" width="110" class="<%='current_menu' if params[:controller]=='pages' and params[:action]=='contactus' %>"><a href="/pages/contactus">Contact US </a></td>
+          <td align="center" width="110" class="<%='current_menu' if params[:controller]=='feedbacks' and params[:action]=='index' %>"><a href="/feedbacks">Feedback</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 <table width="780" height="5" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#cccccc">
-        <tr>
-                <td></td>
-        </tr>
+  <tr>
+    <td></td>
+  </tr>
 </table>
