@@ -16,15 +16,19 @@ class PagesController < ApplicationController
   def restaurants
 
   end
+  
   def sportscenter
 
   end
+  
   def special
 
   end
+  
   def reservation
-    
+
   end
+  
   def lang
     if params[:en]
       session[:en]=true
