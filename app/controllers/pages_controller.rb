@@ -33,6 +33,6 @@ class PagesController < ApplicationController
     else
       session[:en]=nil
     end
-    redirect_to products_path
+    redirect_to '/pages/reservation'
   end
 end
