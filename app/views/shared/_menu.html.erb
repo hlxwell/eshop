@@ -1,12 +1,12 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" class="menu_title">
-        <tr>
-                <td>Product Series </td>
-        </tr>
+  <tr>
+    <td>Product Series </td>
+  </tr>
 </table>
 <table class="left_menu" width="100%" border="0" cellpadding="5" cellspacing="5" bgcolor="#eeeeee">
-        <% for cate in Category.find(:all) %>
-            <tr>
-                    <td class="<%="current_menu" if params[:category]==cate.id.to_s %>"><%= link_to  cate.name,:controller=>:products,:action=>:index,:category=>cate.id %></td>
-            </tr>
-        <% end %>
+  <% for cate in Category.find(:all) %>
+    <tr>
+      <td class="<%="current_menu" if params[:category]==cate.id.to_s %>"><%= link_to  cate.name,:controller=>:products,:action=>:index,:category=>cate.id %></td>
+    </tr>
+  <% end %>
 </table>

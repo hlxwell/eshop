@@ -101,7 +101,7 @@ function guest_login(){
 				+"&loginName="+encodeURI(f.loginName.value)
 				+"&password="+f.password.value
 				+"&loginType=hotel&loginPage=hotelLogin.jsp";
-	GB_showCenter("广州鸣泉居度假村",url,550,650);//酒店名字，550是高，650是宽，根据需要修改。
+	GB_showCenter("杭州宁远农业技术开发有限公司",url,550,650);//酒店名字，550是高，650是宽，根据需要修改。
 }
 //判断登录结束
 
@@ -138,7 +138,7 @@ function queryPrice(){
 			+hotelCode+"&language="+language+"&checkInDate="+f.checkInDate.value
 			+"&checkOutDate="+f.checkOutDate.value+"&roomNum="+f.roomNum.value;
 
-	GB_showCenter("广州鸣泉居度假村",paction,550,650);//酒店名字，550是高，650是宽，根据需要修改。
+	GB_showCenter("杭州宁远农业技术开发有限公司",paction,550,650);//酒店名字，550是高，650是宽，根据需要修改。
 	//f.action=paction;
 	//this.href=paction;
 	//f.target="_blank";
@@ -148,19 +148,19 @@ function queryPrice(){
 //我的预订
 function mybooking(){
 	var url ="/hcrm/FITRoomOrder.do?method=queryOrder&language="+language+"&hotelCode="+hotelCode;
- 	GB_showCenter("广州鸣泉居度假村",url,550,650);//酒店名字，550是高，650是宽，根据需要修改。
+ 	GB_showCenter("杭州宁远农业技术开发有限公司",url,550,650);//酒店名字，550是高，650是宽，根据需要修改。
 }
 
 //取回密码
 function findPassword(){
  	var url ="/hcrm/FITMember.do?method=forgetPassword&hotelCode="+hotelCode+"&language="+language;
- 	GB_showCenter("广州鸣泉居度假村",url,450,650);//酒店名字，550是高，650是宽，根据需要修改。
+ 	GB_showCenter("杭州宁远农业技术开发有限公司",url,450,650);//酒店名字，550是高，650是宽，根据需要修改。
 }
 
 //注册
 function register(){
 	var url = "/hcrm/FITMember.do?method=addForWeb&hotelCode="+hotelCode+"&language="+language;
-	GB_showCenter("广州鸣泉居度假村",url,550,650);//酒店名字，550是高，650是宽，根据需要修改。
+	GB_showCenter("杭州宁远农业技术开发有限公司",url,550,650);//酒店名字，550是高，650是宽，根据需要修改。
 }
 
 //新闻更多
