@@ -165,7 +165,7 @@ function register(){
 
 //新闻更多
 function onLoadWebNews(){
-	top.location="/hcrm/website/hotelhome/"+hotelCode+"/cn/allNews.jsp?hotelCode="+hotelCode+"&langCode="+language+"&type=1";
+	top.location="#";
 }
 
 //促销更多
