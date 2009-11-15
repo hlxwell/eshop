@@ -1,18 +1,18 @@
-<h1>product feedbacks</h1>
+<h1>产品反馈</h1>
 
 <% if @feedbacks %>
-    <table border="1" width="100%">
-            <% for feedback in @feedbacks %>
-                <tr>
-                        <td>Name: <%=h feedback.name %></td>
-                        <td>Email: <%=h feedback.email %></td>
-                </tr>
-                <tr>
-                        <td colspan="2"><%=simple_format(feedback.content) %></td>
-                </tr>
-            <% end %>
+<table border="1" width="100%">
+  <% for feedback in @feedbacks %>
+  <tr>
+    <td>名字: <%=h feedback.name %></td>
+    <td>Email: <%=h feedback.email %></td>
+  </tr>
+  <tr>
+    <td colspan="2"><%=simple_format(feedback.content) %></td>
+  </tr>
+  <% end %>
 
-        <% else %>
-            <p>No feedback!</p>
-        <% end %>
+  <% else %>
+  <p>暂无留言!</p>
+  <% end %>
 </table>

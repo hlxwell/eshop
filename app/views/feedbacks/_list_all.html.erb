@@ -1,23 +1,23 @@
-<h1>All feedbacks</h1>
+<h1>所有留言</h1>
 
 <% if @feedbacks %>
-    <table>
-            <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Content</th>
-            </tr>
+<table>
+  <tr>
+    <th>名字</th>
+    <th>Email</th>
+    <th>内容</th>
+  </tr>
 
-            <% for feedback in @feedbacks %>
-                <tr>
-                        <td><%=h feedback.name %></td>
-                        <td><%=h feedback.email %></td>
-                        <td><%=h feedback.content %></td>
-                        <td><%= image_tag(feedback.product.pictures[0].public_filename(:small)) if  feedback.product and feedback.product.pictures.count>0  %><td>
-                </tr>
-            <% end %>
+  <% for feedback in @feedbacks %>
+  <tr>
+    <td><%=h feedback.name %></td>
+    <td><%=h feedback.email %></td>
+    <td><%=h feedback.content %></td>
+    <td><%= image_tag(feedback.product.pictures[0].public_filename(:small)) if  feedback.product and feedback.product.pictures.count>0  %><td>
+    </tr>
+    <% end %>
 
-        <% else %>
-            <p>No feedback!</p>
-        <% end %>
-</table>
+    <% else %>
+    <p>暂无留言!</p>
+    <% end %>
+  </table>

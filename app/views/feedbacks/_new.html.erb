@@ -1,10 +1,10 @@
-<h1>New feedback</h1>
+<h1>创建留言</h1>
 
 <% form_for(@feedback) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, "名字" %><br />
     <%= f.text_field :name %>
   </p>
   <p>
@@ -12,10 +12,10 @@
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :content %><br />
+    <%= f.label :content, "内容" %><br />
     <%= f.text_field :content %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "提交" %>
   </p>
 <% end %>
