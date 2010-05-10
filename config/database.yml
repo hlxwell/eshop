@@ -19,7 +19,7 @@ development:
   encoding: utf8
   database: epochart
   username: root
-  password:
+  password: hzva@china
   host: 127.0.0.1
   port: 3306
   #socket: /var/run/mysqld/mysqld.sock
@@ -32,7 +32,7 @@ test:
   encoding: utf8
   database: eshop_test
   username: root
-  password:
+  password: hzva@china
   socket: /var/run/mysqld/mysqld.sock
 
 production:
